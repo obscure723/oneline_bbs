@@ -63,19 +63,20 @@
       </thead>
       <tbody>
         
-          <?php
+          <?php 
             $posts = findAll($dbh);
-
-            foreach ($posts as $post) {
-              echo '<tr>';
-              echo '<td>' . $post['id'] . '</td>';
-              echo '<td>' . $post['nickname'] . '</td>';
-              echo '<td>' . $post['comment'] . '</td>';
-              echo '<td>' . $post['created'] . '</td>';
-              echo '</tr>';
-            }
-
+            foreach($posts as $post):
           ?>
+            <tr>
+              <td><?php echo  $post['id']?></td>
+              <td><?php echo  $post['nickname']?></td>
+              <td><?php echo  $post['comment']?></td>
+              <td><?php echo  $post['created']?></td>
+              <td><?php echo  $post['id']?></td>
+              <td><?php echo  $post['id']?></td>
+            </tr>
+
+          <?php endforeach; ?>
         </tr>
       </tbody>
     </table>
